@@ -6,7 +6,7 @@ interface FiltersProps {
 
 export const Filters = ({ onFilterChange }: FiltersProps) => {
   const [filterValue, setFilterValue] = useState('');
-  const debounceTimer = useRef<NodeJS.Timeout | null>(null);
+  const debounceTimer = useRef<number | null>(null);
 
   useEffect(() => {
     return () => {
