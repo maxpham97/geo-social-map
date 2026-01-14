@@ -54,7 +54,7 @@ export const MapView = ({ users, interestFilter }: MapViewProps) => {
 
   const center: [number, number] = useMemo(() => {
     if (filteredUsers.length === 0) {
-      return [50.0, 10.0];
+      return [55.7558, 37.6173];
     }
     
     const validUsers = filteredUsers.filter(
@@ -62,7 +62,7 @@ export const MapView = ({ users, interestFilter }: MapViewProps) => {
     );
     
     if (validUsers.length === 0) {
-      return [50.0, 10.0];
+      return [55.7558, 37.6173];
     }
     
     const avgLat =
@@ -84,7 +84,7 @@ export const MapView = ({ users, interestFilter }: MapViewProps) => {
     <div className="w-full h-screen">
       <MapContainer
         center={center}
-        zoom={filteredUsers.length === 0 ? 5 : 13}
+        zoom={filteredUsers.length === 0 ? 10 : 13}
         style={{ height: '100%', width: '100%' }}
         className="z-0"
       >
